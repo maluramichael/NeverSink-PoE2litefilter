@@ -107,7 +107,7 @@ Show
     MinimapIcon 1 Purple Star
     CustomAlertSound "ooh_anime.mp3" 300
 Show
-    BaseType "Intricate Gloves"
+    BaseType "Expert Intricate Gloves"
     ItemLevel >= 82
     SetFontSize 35
     SetTextColor 255 213 0
@@ -158,7 +158,7 @@ Show
     PlayEffect Purple
     MinimapIcon 1 Purple Diamond
 Show
-    BaseType "Intricate Gloves"
+    BaseType "Expert Intricate Gloves"
     ItemLevel >= 81
     SetFontSize 35
     SetTextColor 255 255 255
@@ -207,7 +207,7 @@ Show
     PlayEffect Purple
     MinimapIcon 1 Purple Triangle
 Show
-    BaseType "Intricate Gloves"
+    BaseType "Expert Intricate Gloves"
     ItemLevel >= 79
     SetFontSize 35
     SetTextColor 255 255 255
@@ -217,6 +217,15 @@ Show
     MinimapIcon 1 Purple Triangle
 Show
     BaseType "Advanced Beaded" "Expert Feathered Tiara" "Expert Chain Tiara"
+    ItemLevel >= 79
+    SetFontSize 35
+    SetTextColor 255 255 255
+    SetBorderColor 255 255 255
+    SetBackgroundColor 80 43 89
+    PlayEffect Purple
+    MinimapIcon 1 Purple Triangle
+Show
+    Class "Belt"
     ItemLevel >= 79
     SetFontSize 35
     SetTextColor 255 255 255
@@ -339,17 +348,12 @@ Hide
 #--------------------------
 # Scroll of Wisdom High Level Hiding
 #--------------------------
-
-
 Hide
     BaseType "Scroll of Wisdom"
-    AreaLevel >= 65
 
 #--------------------------
 # Socketables and Special Character Equipment
 #--------------------------
-
-
 # Currency Tier A: Gemcutter, Annullment
 Show
     Class "Currency"
@@ -499,8 +503,6 @@ Show
 #--------------------------
 # Waystones
 #--------------------------
-
-
 Hide
     WaystoneTier < 14
     Rarity <= Rare
@@ -524,8 +526,6 @@ Show
 #--------------------------
 # Value Rares
 #--------------------------
-
-
 Show
     Class "Rings"
     Rarity Rare
@@ -549,24 +549,10 @@ Show
     PlayEffect Yellow
     MinimapIcon 1 Yellow Diamond
     CustomAlertSound "amulet.wav" 300
-
-Show
-    Class "Belts"
-    Rarity Rare
-    ItemLevel >= 79
-    SetFontSize 35
-    SetTextColor 255 255 255
-    SetBorderColor 255 255 255
-    SetBackgroundColor 214 78 255
-    PlayEffect Purple
-    MinimapIcon 1 Purple Diamond
-    CustomAlertSound "flippy.wav" 300
 
 #--------------------------
 # Rings, Amulets, Belts
 #--------------------------
-
-
 Show
     Class "Rings"
     Rarity <= Magic
@@ -596,62 +582,8 @@ Show
     SetFontSize 30
 
 #--------------------------
-# Salvagable Items
-#--------------------------
-
-
-# Show
-#    Sockets > 0
-#    Rarity Normal
-#    SetBorderColor 200 200 200
-#    SetFontSize 35
-
-# Show
-#    Quality > 0
-#    Rarity Normal
-#    SetBorderColor 200 200 200
-#    SetFontSize 35
-
-# Show
-#    Sockets > 0
-#    Rarity Magic
-#    SetBorderColor 0 0 200
-#    SetFontSize 35
-
-# Show
-#    Quality > 0
-#    Rarity Magic
-#    SetBorderColor 0 0 200
-#    SetFontSize 35
-#--------------------------
 # Random Rares
 #--------------------------
-
-#    # Uncomment this rule to hide low level rares in high level zones
-
-# Hide
-#    Rarity Rare
-#    DropLevel < 50
-#    AreaLevel > 72
-
-# Hide
-#     Class "Maces" "Bows" "Crossbows"
-#     Rarity <= Rare
-#     AreaLevel > 74
-
-# Bases i really dont want
-# Hide
-#     BaseType "Padded Leggings" "Tower Shield" "Heavy Crown" "Feathered Targe" "Vest" "Rogue" "Tribal" "Jacket" "Mask" "Quarterstaff" "Sabatons" "Cuffs" "Wraps" "Hood" "Targe" "Cuirass" "Mitts" "Shielded Helm" "Felt" "Lizardscale" "Serpentscale" "Swathed Cap" "Scale Mail" "Cloaked" "Hunting Shoes" "Gauntlets" "Sectioned Bracers" "Coat"
-#     Rarity <= Rare
-#     AreaLevel > 74
-
-# bases i want but that are magic
-# Hide
-#     BaseType  "Greaves" "Sceptre"
-#     Rarity <= Magic
-#     AreaLevel > 74
-
-
 Show
     Rarity Rare
     AreaLevel >= 79
@@ -670,8 +602,6 @@ Hide
 #--------------------------
 # Hide Rules (only high level), super light edition
 #--------------------------
-
-
 Hide
     Quality = 0
     AreaLevel > 70
@@ -681,39 +611,7 @@ Hide
 Hide
     AreaLevel >= 78
     Rarity <= Magic
-    DropLevel < 65
     Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-    AreaLevel > 75
-    Rarity <= Magic
-    DropLevel < 64
-    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-    AreaLevel > 73
-    Rarity <= Magic
-    DropLevel < 60
-    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-    AreaLevel > 72
-    Rarity <= Magic
-    DropLevel < 55
-    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-# Quivers have some relevant bases at 50+ so we treat them different
-Hide
-    AreaLevel > 74
-    Rarity <= Magic
-    DropLevel < 50
-    Class "Quivers"
-
-Hide
-    AreaLevel > 70
-    Rarity <= Normal
-    DropLevel < 50
-    Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
 #--------------------------
 # OPTIONAL RULES
